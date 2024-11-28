@@ -4,464 +4,464 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix nominee: <https://cours.iut-orsay.fr/npbd/nominee> .
+@prefix aotyNominee: <https://cours.iut-orsay.fr/npbd/aotyNominee> .
 
-iut:nominee1 a iut:Nominee;
+iut:aotyNominee1 a iut:Nominee;
   iut:name "When We All Fall Asleep, Where Do We Go?"@en;
-  iut:id "1"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Billie Eilish"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Billie%2BEilish/Billie%2520Eilish_1_1_1594138954.jpg?itok=3-71Dfxh" .
 
-iut:nominee2 a iut:Nominee;
+iut:aotyNominee2 a iut:Nominee;
   iut:name "I,I"@en;
-  iut:id "2"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Bon Iver"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bon%2BIver/Bon%2520Iver_1_1_1578385181.jpg?itok=_M1hc5Ux" .
 
-iut:nominee3 a iut:Nominee;
+iut:aotyNominee3 a iut:Nominee;
   iut:name "Norman F***ing Rockwell!"@en;
-  iut:id "3"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Lana Del Rey"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Lana%2BDel%2BRey/Lana%2520Del%2520Rey_1_1_1581552089.jpg?itok=a-RXRsSr" .
 
-iut:nominee4 a iut:Nominee;
+iut:aotyNominee4 a iut:Nominee;
   iut:name "thank u, next"@en;
-  iut:id "4"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Ariana Grande"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Ariana%2BGrande/Ariana%2520Grande_1_1_1578384678.jpg?itok=Amj90j13" .
 
-iut:nominee5 a iut:Nominee;
+iut:aotyNominee5 a iut:Nominee;
   iut:name "I Used To Know Her"@en;
-  iut:id "5"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "H.E.R."@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/H.E.R./H.E.R._1_1_1594631035.jpg?itok=ClJe-2MN" .
 
-iut:nominee6 a iut:Nominee;
+iut:aotyNominee6 a iut:Nominee;
   iut:name "7"@en;
-  iut:id "6"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Lil Nas X"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Montero%2BLamar%2BHill/Lil%2520Nas%2520X_1_1_1581656760.jpg?itok=_YR6dOjI" .
 
-iut:nominee7 a iut:Nominee;
+iut:aotyNominee7 a iut:Nominee;
   iut:name "Cuz I Love You (Deluxe)"@en;
-  iut:id "7"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Lizzo"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Ricky%2BReed/Ricky%2520Reed_1_1_1581552716.jpg?itok=Qw0BFFJ4" .
 
-iut:nominee8 a iut:Nominee;
+iut:aotyNominee8 a iut:Nominee;
   iut:name "Father Of The Bride"@en;
-  iut:id "8"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Vampire Weekend"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Vampire%2BWeekend/Vampire%2520Weekend_1_1_1578387474.jpg?itok=mAj-5E-g" .
 
-iut:nominee9 a iut:Nominee;
+iut:aotyNominee9 a iut:Nominee;
   iut:name "Golden Hour"@en;
-  iut:id "9"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2018"^^xsd:gYear;
   iut:artist "Kacey Musgraves"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Kacey%2BMusgraves/Kacey%2520Musgraves_1_1_1578384727.jpg?itok=OQQ3rnwH" .
 
-iut:nominee10 a iut:Nominee;
+iut:aotyNominee10 a iut:Nominee;
   iut:name "24K Magic"@en;
-  iut:id "10"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2017"^^xsd:gYear;
   iut:artist "Bruno Mars"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bruno%2BMars/Bruno%2520Mars_1_1_1578385368.jpg?itok=KhxnacRR" .
 
-iut:nominee11 a iut:Nominee;
+iut:aotyNominee11 a iut:Nominee;
   iut:name "25"@en;
-  iut:id "11"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2016"^^xsd:gYear;
   iut:artist "Adele"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Adele/Adele_1_1_1584090130.jpg?itok=xlwW6t3a" .
 
-iut:nominee12 a iut:Nominee;
+iut:aotyNominee12 a iut:Nominee;
   iut:name "1989"@en;
-  iut:id "12"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2015"^^xsd:gYear;
   iut:artist "Taylor Swift"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Taylor%2BSwift/Taylor%2520Swift_1_1_1588259933.jpg?itok=faoR37HC" .
 
-iut:nominee13 a iut:Nominee;
+iut:aotyNominee13 a iut:Nominee;
   iut:name "Morning Phase"@en;
-  iut:id "13"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2014"^^xsd:gYear;
   iut:artist "Beck"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/beck.jpg?itok=cY2Oix_7" .
 
-iut:nominee14 a iut:Nominee;
+iut:aotyNominee14 a iut:Nominee;
   iut:name "Random Access Memories"@en;
-  iut:id "14"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2013"^^xsd:gYear;
   iut:artist "Daft Punk"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/465276899_daft_punk.jpg?itok=LnRBgTfq" .
 
-iut:nominee15 a iut:Nominee;
+iut:aotyNominee15 a iut:Nominee;
   iut:name "Babel"@en;
-  iut:id "15"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2012"^^xsd:gYear;
   iut:artist "Mumford & Sons"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/161430627_mumford_sons.jpg?itok=OtgIihLL" .
 
-iut:nominee16 a iut:Nominee;
+iut:aotyNominee16 a iut:Nominee;
   iut:name "21"@en;
-  iut:id "16"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2011"^^xsd:gYear;
   iut:artist "Adele"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/138843004_adele.jpg?itok=REu3ZiUk" .
 
-iut:nominee17 a iut:Nominee;
+iut:aotyNominee17 a iut:Nominee;
   iut:name "The Suburbs"@en;
-  iut:id "17"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2010"^^xsd:gYear;
   iut:artist "Arcade Fire"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/109066166_arcade_fire.jpg?itok=xal86pVG" .
 
-iut:nominee18 a iut:Nominee;
+iut:aotyNominee18 a iut:Nominee;
   iut:name "Fearless"@en;
-  iut:id "18"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2009"^^xsd:gYear;
   iut:artist "Taylor Swift"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/96324387_taylor_swift.jpg?itok=HhLIxlPS" .
 
-iut:nominee19 a iut:Nominee;
+iut:aotyNominee19 a iut:Nominee;
   iut:name "Raising Sand"@en;
-  iut:id "19"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2008"^^xsd:gYear;
   iut:artist "Robert Plant & Alison Krauss"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Robert%2BPlant/Robert%2520Plant_1_1_1591112980.jpg?itok=6LLLbn4I" .
 
-iut:nominee20 a iut:Nominee;
+iut:aotyNominee20 a iut:Nominee;
   iut:name "River: The Joni Letters"@en;
-  iut:id "20"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2007"^^xsd:gYear;
   iut:artist "Herbie Hancock"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Herbie%2BHancock/Herbie%2520Hancock_1_1_1596790289.jpg?itok=b1MAcr9T" .
 
-iut:nominee21 a iut:Nominee;
+iut:aotyNominee21 a iut:Nominee;
   iut:name "Taking The Long Way"@en;
-  iut:id "21"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2006"^^xsd:gYear;
   iut:artist "Dixie Chicks"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Dixie%2BChicks/Dixie%2520Chicks_1_1_1598343738.jpg?itok=YXj33PAV" .
 
-iut:nominee22 a iut:Nominee;
+iut:aotyNominee22 a iut:Nominee;
   iut:name "How To Dismantle An Atomic Bomb"@en;
-  iut:id "22"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2005"^^xsd:gYear;
   iut:artist "U2"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/U2/U2_1_1_1578385236.jpg?itok=rQVhxxhL" .
 
-iut:nominee23 a iut:Nominee;
+iut:aotyNominee23 a iut:Nominee;
   iut:name "Genius Loves Company"@en;
-  iut:id "23"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2004"^^xsd:gYear;
   iut:artist "Ray Charles & Various Artists"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/ray_charles_spotlight_107293349.png?itok=57kc2vwB" .
 
-iut:nominee24 a iut:Nominee;
+iut:aotyNominee24 a iut:Nominee;
   iut:name "Speakerboxxx/The Love Below"@en;
-  iut:id "24"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2003"^^xsd:gYear;
   iut:artist "OutKast"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/OutKast/Outkast_1_1_1595810284.jpg?itok=U50l3oRY" .
 
-iut:nominee25 a iut:Nominee;
+iut:aotyNominee25 a iut:Nominee;
   iut:name "Come Away With Me"@en;
-  iut:id "25"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2002"^^xsd:gYear;
   iut:artist "Norah Jones"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Norah%2BJones/Norah%2520Jones_1_1_1588264654.jpg?itok=tpWJ31fa" .
 
-iut:nominee26 a iut:Nominee;
+iut:aotyNominee26 a iut:Nominee;
   iut:name "O Brother, Where Art Thou? - Soundtrack"@en;
-  iut:id "26"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2001"^^xsd:gYear;
   iut:artist "(Various Artists)"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/t_bone_burnett_spotlight_609763428.png?itok=_teXgyr1" .
 
-iut:nominee27 a iut:Nominee;
+iut:aotyNominee27 a iut:Nominee;
   iut:name "Two Against Nature"@en;
-  iut:id "27"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "2000"^^xsd:gYear;
   iut:artist "Steely Dan"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Steely%2BDan/Steely%2520Dan_1_1_1575366216.jpg?itok=-Dgj2tWg" .
 
-iut:nominee28 a iut:Nominee;
+iut:aotyNominee28 a iut:Nominee;
   iut:name "Supernatural"@en;
-  iut:id "28"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1999"^^xsd:gYear;
   iut:artist "Santana"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Clive%2BDavis/Clive%2520Davis_1_1_1581552219.jpg?itok=oS9C55fh" .
 
-iut:nominee29 a iut:Nominee;
+iut:aotyNominee29 a iut:Nominee;
   iut:name "The Miseducation Of Lauryn Hill"@en;
-  iut:id "29"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1998"^^xsd:gYear;
   iut:artist "Lauryn Hill"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/laurynhill-spotlight-459735960.png?itok=KsyXaL_u" .
 
-iut:nominee30 a iut:Nominee;
+iut:aotyNominee30 a iut:Nominee;
   iut:name "Time Out Of Mind"@en;
-  iut:id "30"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1997"^^xsd:gYear;
   iut:artist "Bob Dylan"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bob%2BDylan/Bob%2520Dylan_1_1_1579182058.jpg?itok=VI5nSz8n" .
 
-iut:nominee31 a iut:Nominee;
+iut:aotyNominee31 a iut:Nominee;
   iut:name "Falling Into You"@en;
-  iut:id "31"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1996"^^xsd:gYear;
   iut:artist "Celine Dion"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Celine%2BDion/C%25C3%25A9line%2520Dion_1_1_1579163253.jpg?itok=7lpsetr2" .
 
-iut:nominee32 a iut:Nominee;
+iut:aotyNominee32 a iut:Nominee;
   iut:name "Jagged Little Pill"@en;
-  iut:id "32"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1995"^^xsd:gYear;
   iut:artist "Alanis Morissette"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Alanis%2BMorissette/Alanis%2520Morissette_1_1_1578385387.jpg?itok=9HWGTLzj" .
 
-iut:nominee33 a iut:Nominee;
+iut:aotyNominee33 a iut:Nominee;
   iut:name "MTV Unplugged"@en;
-  iut:id "33"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1994"^^xsd:gYear;
   iut:artist "Tony Bennett"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Tony%2BBennett/Tony%2520Bennett_1_1_1584465343.jpg?itok=Zk2PcPhY" .
 
-iut:nominee34 a iut:Nominee;
+iut:aotyNominee34 a iut:Nominee;
   iut:name "The Bodyguard - Original Soundtrack Album"@en;
-  iut:id "34"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1993"^^xsd:gYear;
   iut:artist "Whitney Houston"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Whitney%2BHouston/Whitney%2520Houston_1_1_1594980040.jpg?itok=LS4iD1jw" .
 
-iut:nominee35 a iut:Nominee;
+iut:aotyNominee35 a iut:Nominee;
   iut:name "Unplugged"@en;
-  iut:id "35"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1992"^^xsd:gYear;
   iut:artist "Eric Clapton"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Eric%2BClapton/Eric%2520Clapton_1_1_1581552257.jpg?itok=VS2OFNyf" .
 
-iut:nominee36 a iut:Nominee;
+iut:aotyNominee36 a iut:Nominee;
   iut:name "Unforgettable With Love"@en;
-  iut:id "36"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1991"^^xsd:gYear;
   iut:artist "Natalie Cole"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Natalie%2BCole/Natalie%2520Cole_1_1_1591112950.jpg?itok=A9t_I3Ba" .
 
-iut:nominee37 a iut:Nominee;
+iut:aotyNominee37 a iut:Nominee;
   iut:name "Back On The Block"@en;
-  iut:id "37"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1990"^^xsd:gYear;
   iut:artist "Quincy Jones (And Various Artists)"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Quincy%2BJones/Quincy%2520Jones_1_1_1596789836.jpg?itok=54PdILuC" .
 
-iut:nominee38 a iut:Nominee;
+iut:aotyNominee38 a iut:Nominee;
   iut:name "Nick Of Time"@en;
-  iut:id "38"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1989"^^xsd:gYear;
   iut:artist "Bonnie Raitt"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bonnie%2BRaitt/Bonnie%2520Raitt_1_1_1581551760.jpg?itok=3VdTUqfR" .
 
-iut:nominee39 a iut:Nominee;
+iut:aotyNominee39 a iut:Nominee;
   iut:name "Faith"@en;
-  iut:id "39"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1988"^^xsd:gYear;
   iut:artist "George Michael"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/George%2BMichael/George%2520Michael_1_1_1578384981.jpg?itok=T9m_7YAu" .
 
-iut:nominee40 a iut:Nominee;
+iut:aotyNominee40 a iut:Nominee;
   iut:name "The Joshua Tree"@en;
-  iut:id "40"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1987"^^xsd:gYear;
   iut:artist "U2"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/U2/U2_1_1_1578385236.jpg?itok=rQVhxxhL" .
 
-iut:nominee41 a iut:Nominee;
+iut:aotyNominee41 a iut:Nominee;
   iut:name "Graceland"@en;
-  iut:id "41"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1986"^^xsd:gYear;
   iut:artist "Paul Simon"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Paul%2BSimon/Paul%2520Simon_1_1_1578385319.jpg?itok=H2xb3gsd" .
 
-iut:nominee42 a iut:Nominee;
+iut:aotyNominee42 a iut:Nominee;
   iut:name "No Jacket Required"@en;
-  iut:id "42"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1985"^^xsd:gYear;
   iut:artist "Phil Collins"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Phil%2BCollins/Phil%2520Collins_1_1_1596706545.jpg?itok=MQR7SHdv" .
 
-iut:nominee43 a iut:Nominee;
+iut:aotyNominee43 a iut:Nominee;
   iut:name "Can't Slow Down"@en;
-  iut:id "43"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1984"^^xsd:gYear;
   iut:artist "Lionel Richie"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Lionel%2BRichie/Lionel%2520Richie_1_1_1578384783.jpg?itok=6uFBvX0V" .
 
-iut:nominee44 a iut:Nominee;
+iut:aotyNominee44 a iut:Nominee;
   iut:name "Thriller"@en;
-  iut:id "44"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1983"^^xsd:gYear;
   iut:artist "Michael Jackson"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Michael%2BJackson/Michael%2520Jackson_1_1_1584089273.jpg?itok=8N4Ineev" .
 
-iut:nominee45 a iut:Nominee;
+iut:aotyNominee45 a iut:Nominee;
   iut:name "Toto IV"@en;
-  iut:id "45"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1982"^^xsd:gYear;
   iut:artist "Toto"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Toto/Toto_1_1_1581552180.jpg?itok=zeWhOeO_" .
 
-iut:nominee46 a iut:Nominee;
+iut:aotyNominee46 a iut:Nominee;
   iut:name "Double Fantasy"@en;
-  iut:id "46"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1981"^^xsd:gYear;
   iut:artist "John Lennon & Yoko Ono"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/John%2BLennon/John%2520Lennon_1_1_1591112918.jpg?itok=EIHqVdbg" .
 
-iut:nominee47 a iut:Nominee;
+iut:aotyNominee47 a iut:Nominee;
   iut:name "Christopher Cross"@en;
-  iut:id "47"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1980"^^xsd:gYear;
   iut:artist "Christopher Cross"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Christopher%2BCross/Christopher%2520Cross_1_1_1581554585.jpg?itok=sDilUxBw" .
 
-iut:nominee48 a iut:Nominee;
+iut:aotyNominee48 a iut:Nominee;
   iut:name "52nd Street"@en;
-  iut:id "48"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1979"^^xsd:gYear;
   iut:artist "Billy Joel"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Billy%2BJoel/Billy%2520Joel_1_1_1578384978.jpg?itok=QtM7Q8fq" .
 
-iut:nominee49 a iut:Nominee;
+iut:aotyNominee49 a iut:Nominee;
   iut:name "Saturday Night Fever - Soundtrack"@en;
-  iut:id "49"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1978"^^xsd:gYear;
   iut:artist "(Various Artists)"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bee%2BGees/Bee%2520Gees_1_1_1591112992.jpg?itok=qWVlVFGB" .
 
-iut:nominee50 a iut:Nominee;
+iut:aotyNominee50 a iut:Nominee;
   iut:name "Rumours"@en;
-  iut:id "50"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1977"^^xsd:gYear;
   iut:artist "Fleetwood Mac"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Fleetwood%2BMac/Fleetwood%2520Mac_1_1_1579189992.jpg?itok=Olk5SO3Z" .
 
-iut:nominee51 a iut:Nominee;
+iut:aotyNominee51 a iut:Nominee;
   iut:name "Songs In The Key Of Life"@en;
-  iut:id "51"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1976"^^xsd:gYear;
   iut:artist "Stevie Wonder"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Stevie%2BWonder/Stevie%2520Wonder_1_1_1581552061.jpg?itok=nuRak4iN" .
 
-iut:nominee52 a iut:Nominee;
+iut:aotyNominee52 a iut:Nominee;
   iut:name "Still Crazy After All These Years"@en;
-  iut:id "52"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1975"^^xsd:gYear;
   iut:artist "Paul Simon"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Paul%2BSimon/Paul%2520Simon_1_1_1578385319.jpg?itok=H2xb3gsd" .
 
-iut:nominee53 a iut:Nominee;
+iut:aotyNominee53 a iut:Nominee;
   iut:name "Fulfillingness' First Finale"@en;
-  iut:id "53"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1974"^^xsd:gYear;
   iut:artist "Stevie Wonder"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Stevie%2BWonder/Stevie%2520Wonder_1_1_1581552061.jpg?itok=nuRak4iN" .
 
-iut:nominee54 a iut:Nominee;
+iut:aotyNominee54 a iut:Nominee;
   iut:name "Innervisions"@en;
-  iut:id "54"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1973"^^xsd:gYear;
   iut:artist "Stevie Wonder"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Stevie%2BWonder/Stevie%2520Wonder_1_1_1581552061.jpg?itok=nuRak4iN" .
 
-iut:nominee55 a iut:Nominee;
+iut:aotyNominee55 a iut:Nominee;
   iut:name "The Concert For Bangla Desh"@en;
-  iut:id "55"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1972"^^xsd:gYear;
   iut:artist "George Harrison, Ravi Shankar, Bob Dylan, Leon Russell, Ringo Starr, Billy Preston, Eric Clapton & Klaus Voormann"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/George%2BHarrison/George%2520Harrison_1_1_1578385501.jpg?itok=e1pFJtVR" .
 
-iut:nominee56 a iut:Nominee;
+iut:aotyNominee56 a iut:Nominee;
   iut:name "Tapestry"@en;
-  iut:id "56"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1971"^^xsd:gYear;
   iut:artist "Carole King"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Carole%2BKing/Carole%2520King_1_1_1578385473.jpg?itok=W5y3jRey" .
 
-iut:nominee57 a iut:Nominee;
+iut:aotyNominee57 a iut:Nominee;
   iut:name "Bridge Over Troubled Water"@en;
-  iut:id "57"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1970"^^xsd:gYear;
   iut:artist "Simon And Garfunkel"@en .
 
-iut:nominee58 a iut:Nominee;
+iut:aotyNominee58 a iut:Nominee;
   iut:name "Blood, Sweat And Tears"@en;
-  iut:id "58"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1969"^^xsd:gYear;
   iut:artist "Blood, Sweat And Tears"@en .
 
-iut:nominee59 a iut:Nominee;
+iut:aotyNominee59 a iut:Nominee;
   iut:name "By The Time I Get To Phoenix"@en;
-  iut:id "59"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1968"^^xsd:gYear;
   iut:artist "Glen Campbell"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Glen%2BCampbell/Glen%2520Campbell_1_1_1598615569.jpg?itok=n3Jc20ht" .
 
-iut:nominee60 a iut:Nominee;
+iut:aotyNominee60 a iut:Nominee;
   iut:name "Sgt. Pepper's Lonely Hearts Club Band"@en;
-  iut:id "60"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1967"^^xsd:gYear;
   iut:artist "The Beatles"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/The%2BBeatles/The%2520Beatles_1_1_1591112972.jpg?itok=KFRZmETY" .
 
-iut:nominee61 a iut:Nominee;
+iut:aotyNominee61 a iut:Nominee;
   iut:name "A Man And His Music"@en;
-  iut:id "61"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1966"^^xsd:gYear;
   iut:artist "Frank Sinatra"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Frank%2BSinatra/Frank%2520Sinatra_1_1_1581552147.jpg?itok=-iX5YZhY" .
 
-iut:nominee62 a iut:Nominee;
+iut:aotyNominee62 a iut:Nominee;
   iut:name "September Of My Years"@en;
-  iut:id "62"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1965"^^xsd:gYear;
   iut:artist "Frank Sinatra"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Frank%2BSinatra/Frank%2520Sinatra_1_1_1581552147.jpg?itok=-iX5YZhY" .
 
-iut:nominee63 a iut:Nominee;
+iut:aotyNominee63 a iut:Nominee;
   iut:name "Getz/Gilberto"@en;
-  iut:id "63"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1964"^^xsd:gYear;
   iut:artist "Stan Getz & Jo�o Gilberto"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Stan%2BGetz/Stan%2520Getz_1_1_1581618079.jpg?itok=1uHIRekD" .
 
-iut:nominee64 a iut:Nominee;
+iut:aotyNominee64 a iut:Nominee;
   iut:name "The Button-Down Mind Of Bob Newhart"@en;
-  iut:id "64"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1960"^^xsd:gYear;
   iut:artist "Bob Newhart"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Bob%2BNewhart/Bob%2520Newhart_1_1_1597173403.jpg?itok=2eVVcalO" .
 
-iut:nominee65 a iut:Nominee;
+iut:aotyNominee65 a iut:Nominee;
   iut:name "Come Dance With Me"@en;
-  iut:id "65"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1959"^^xsd:gYear;
   iut:artist "Frank Sinatra"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Frank%2BSinatra/Frank%2520Sinatra_1_1_1581552147.jpg?itok=-iX5YZhY" .
 
-iut:nominee66 a iut:Nominee;
+iut:aotyNominee66 a iut:Nominee;
   iut:name "The Music From Peter Gunn"@en;
-  iut:id "66"^^xsd:int;
+  iut:category "Album Of The Year"@en;
   iut:year "1958"^^xsd:gYear;
   iut:artist "Henry Mancini"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Henry%2BMancini/Henry%2520Mancini_1_1_1581553583.jpg?itok=oMIyl-mj" .
