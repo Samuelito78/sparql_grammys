@@ -1,0 +1,5 @@
+{
+  "/api/graphdb/route": "app/api/graphdb/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/page": "app/page.js"
+}
