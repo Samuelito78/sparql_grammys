@@ -11,7 +11,7 @@ SELECT ?genreLabel ?countryLabel WHERE {
 ```
 
 
-example of a query display the name and year of the nominee for Album Of The Year in the Grammys using our ontologies :
+example of a query displaying the name and year of the nominee for Album Of The Year in the Grammys using our ontologies :
 ```sparql
 PREFIX iut: <https://cours.iut-orsay.fr/npbd/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
