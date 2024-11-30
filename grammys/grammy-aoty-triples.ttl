@@ -28,14 +28,14 @@ iut:aotyNominee3 a iut:Nominee;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Lana%2BDel%2BRey/Lana%2520Del%2520Rey_1_1_1581552089.jpg?itok=a-RXRsSr" .
 
 iut:aotyNominee4 a iut:Nominee;
-  iut:name "thank u, next"@en;
+  iut:name "Thank U, Next"@en;
   iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "Ariana Grande"@en;
   iut:imageUrl "https://www.grammy.com/sites/com/files/styles/artist_circle/public/muzooka/Ariana%2BGrande/Ariana%2520Grande_1_1_1578384678.jpg?itok=Amj90j13" .
 
 iut:aotyNominee5 a iut:Nominee;
-  iut:name "I Used To Know Her"@en;
+  iut:name "I Used to Know Her"@en;
   iut:category "Album Of The Year"@en;
   iut:year "2019"^^xsd:gYear;
   iut:artist "H.E.R."@en;
