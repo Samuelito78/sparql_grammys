@@ -26,3 +26,43 @@ WHERE {
 }
 ORDER BY ?year
 ```
+
+example of a construct that gets every album from our graph and links them to their genre on wikidata :
+```sparql
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+CONSTRUCT {
+  ?entity a iut:Nominee ;
+          iut:name ?name ;
+          iut:category "Album Of The Year"@en ;
+          iut:year ?year ;
+          iut:artist ?artist ;
+          iut:imageUrl ?imageUrl ;
+          iut:linkedToWikidata ?wikidataEntity ;
+          iut:hasGenre ?wikidataGenreLabel .
+}
+WHERE {
+  # our local graph
+  ?entity a iut:Nominee ;
+          iut:category "Album Of The Year"@en ;
+          iut:name ?name ;
+          iut:artist ?artist ;
+          iut:year ?year ;
+          iut:imageUrl ?imageUrl .
+  FILTER (lang(?name) = "en")
+  
+  # federated part to link to wikidata
+  SERVICE <https://query.wikidata.org/sparql> {
+    ?wikidataEntity wdt:P31 wd:Q482994 ;
+                    rdfs:label ?name ;
+                    wdt:P136 ?wikidataGenre .
+    ?wikidataGenre rdfs:label ?wikidataGenreLabel .
+    FILTER (lang(?wikidataGenreLabel) = "en")
+    FILTER (lang(?name) = "en")
+  }
+}
+```
