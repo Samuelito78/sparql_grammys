@@ -1,6 +1,5 @@
 // src/app/page.js
 import QueryGraphDB from "./components/QueryGraphDB";
-import Image from 'next/image';
 
 export default function Home() {
     return (

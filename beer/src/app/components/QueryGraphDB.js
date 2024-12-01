@@ -1,32 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { Chart } from "chart.js";
+import PieChart from "./PieChart";
 
 export default function QueryGraphDB() {
     const [result, setResult] = useState(null);
     const [startDate, setStartDate] = useState(1958);
     const [endDate, setEndDate] = useState(2019);
     const [type, setType] = useState("albums");
-
-    const [query, setQuery] = useState(`
-        PREFIX iut: <https://cours.iut-orsay.fr/npbd/>
-        PREFIX wd: <http://www.wikidata.org/entity/>
-        PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-        SELECT * WHERE {
-        ?entity a iut:Nominee ;
-                iut:category "{queryType} Of The Year"@en ; # on met un boolean de con qui change soit album soit song
-                iut:name ?name ;
-                iut:year ?year ;
-                iut:hasGenre ?wikidataGenreLabel .
-
-        # Convert the xsd:gYear to a string and compare
-        FILTER (xsd:integer(str(?year)) >= ${startDate} && xsd:integer(str(?year)) <= ${endDate}) # ici on change les années avec des variables de con voila bisous
-            }`);
-
     const MIN_DATE = 1958;
     const MAX_DATE = 2019;
 
@@ -41,12 +22,26 @@ export default function QueryGraphDB() {
     };
 
     const executeQuery = async () => {
-        let queryType;
-        if (type === "albums") queryType = "Album";
-        else queryType = "Song";
-        console.log(queryType);
+        const queryType = type === "albums" ? "Album" : "Song";
 
-        const updatedQuery = query.replace("{queryType}", queryType);
+        const updatedQuery = `
+            PREFIX iut: <https://cours.iut-orsay.fr/npbd/>
+            PREFIX wd: <http://www.wikidata.org/entity/>
+            PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+            SELECT ?wikidataGenreLabel (COUNT(?entity) AS ?genreCount)
+            WHERE {
+                ?entity a iut:Nominee ;
+                        iut:category "${queryType} Of The Year"@en ;
+                        iut:year ?year ;
+                        iut:hasGenre ?wikidataGenreLabel .
+
+                FILTER (xsd:integer(str(?year)) >= ${startDate} && xsd:integer(str(?year)) <= ${endDate})
+            }
+            GROUP BY ?wikidataGenreLabel
+            ORDER BY DESC(?genreCount)`;
 
         try {
             const response = await fetch("/api/graphdb", {
@@ -88,7 +83,7 @@ export default function QueryGraphDB() {
             <div className="form-group">
                 <div className="types">
                     <label
-                        className={`radio-button ${type === "albums" ? "selected" : ""} `}
+                        className={`radio-button ${type === "albums" ? "selected" : ""}`}
                     >
                         <input
                             type="radio"
@@ -100,7 +95,7 @@ export default function QueryGraphDB() {
                         Albums
                     </label>
                     <label
-                        className={`radio-button ${type === "singles" ? "selected" : ""} `}
+                        className={`radio-button ${type === "singles" ? "selected" : ""}`}
                     >
                         <input
                             type="radio"
@@ -142,8 +137,8 @@ export default function QueryGraphDB() {
                     <div
                         className="progress-bar-fill"
                         style={{
-                            left: `${leftPercentage}% `,
-                            width: `${widthPercentage}% `,
+                            left: `${leftPercentage}%`,
+                            width: `${widthPercentage}%`,
                         }}
                     ></div>
                 </div>
@@ -156,7 +151,7 @@ export default function QueryGraphDB() {
             </div>
 
             <pre>
-                {JSON.stringify(result, null, 2)}
+                <PieChart jsonData={result} />
             </pre>
         </div>
     );

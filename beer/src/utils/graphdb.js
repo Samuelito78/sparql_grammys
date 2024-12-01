@@ -1,5 +1,5 @@
 // src/utils/graphdb.js
-const GRAPHDB_URL = "http://Bonnet-de-bain.local:7200/repositories/aoty-soty";
+const GRAPHDB_URL = "http://localhost:7200/repositories/grammys-sparql";
 
 export async function executeSparqlQuery(query) {
   const headers = {
