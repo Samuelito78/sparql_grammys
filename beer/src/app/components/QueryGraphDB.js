@@ -1,38 +1,139 @@
 "use client";
 
+import { handleClientScriptLoad } from "next/script";
 import { useState } from "react";
 
 export default function QueryGraphDB() {
-  const [query, setQuery] = useState("");
-  const [result, setResult] = useState(null);
+    const [query, setQuery] = useState("");
+    const [result, setResult] = useState(null);
+    const [startDate, setStartDate] = useState(1958);
+    const [endDate, setEndDate] = useState(2019);
+    const [type, setType] = useState("albums");
 
-  const executeQuery = async () => {
-    try {
-      const response = await fetch("/api/graphdb", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
+    const MIN_DATE = 1958;
+    const MAX_DATE = 2019;
 
-      const data = await response.json();
-      setResult(data);
-    } catch (error) {
-      console.error("Error executing query:", error);
-    }
-  };
+    const calculateProgressBar = (start, end) => {
+        const leftPercentage = ((start - MIN_DATE) / (MAX_DATE - MIN_DATE)) * 100;
 
-  return (
-    <div>
-      <textarea
-        rows={5}
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Le SQL ici mon salaud"
-      />
-      <button onClick={executeQuery}>Ca test en balle</button>
-      <pre>{JSON.stringify(result, null, 2)}</pre>
-    </div>
-  );
+        const widthPercentage = start === end
+            ? 0.5
+            : ((end - start) / (MAX_DATE - MIN_DATE)) * 100;
+
+        return { leftPercentage, widthPercentage };
+    };
+
+
+    const executeQuery = async () => {
+        try {
+            const response = await fetch("/api/graphdb", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ query }),
+            });
+
+            const data = await response.json();
+            setResult(data);
+        } catch (error) {
+            console.error("Error executing query:", error);
+        }
+    };
+
+    const handleStartDateChange = (e) => {
+        let value = parseInt(e.target.value, 10);
+        if (value < MIN_DATE) value = MIN_DATE;
+        if (value > MAX_DATE) value = MAX_DATE;
+        if (value > endDate) value = endDate;
+        setStartDate(value);
+    };
+
+    const handleEndDateChange = (e) => {
+        let value = parseInt(e.target.value, 10);
+        if (value < MIN_DATE) value = MIN_DATE;
+        if (value > MAX_DATE) value = MAX_DATE;
+        if (value < startDate) value = startDate;
+        setEndDate(value);
+    };
+
+    const { leftPercentage, widthPercentage } = calculateProgressBar(startDate, endDate);
+
+    return (
+        <div>
+            <h2>Trouvez les statistiques des Grammys de {MIN_DATE} à {MAX_DATE}</h2>
+            <div className="form-group">
+                <div className="types">
+                    <label
+                        className={`radio-button ${type === "albums" ? "selected" : ""}`}
+                    >
+                        <input
+                            type="radio"
+                            name="type"
+                            value="albums"
+                            checked={type === "albums"}
+                            onChange={(e) => setType(e.target.value)}
+                        />
+                        Albums
+                    </label>
+                    <label
+                        className={`radio-button ${type === "singles" ? "selected" : ""}`}
+                    >
+                        <input
+                            type="radio"
+                            name="type"
+                            value="singles"
+                            checked={type === "singles"}
+                            onChange={(e) => setType(e.target.value)}
+                        />
+                        Singles
+                    </label>
+                </div>
+                <div className="dates">
+                    <input
+                        type="number"
+                        min={MIN_DATE}
+                        max={MAX_DATE}
+                        step="1"
+                        onKeyDown={(event) => {
+                            event.preventDefault();
+                        }}
+                        value={startDate}
+                        onChange={handleStartDateChange}
+                    // onBlur={handleStartDateChange}
+                    />
+                    <input
+                        type="number"
+                        min={MIN_DATE}
+                        max={MAX_DATE}
+                        step="1"
+                        onKeyDown={(event) => {
+                            event.preventDefault();
+                        }}
+                        value={endDate}
+                        onChange={handleEndDateChange}
+                    // onBlur={handleEndDateChange}
+                    />
+                </div>
+
+                <div className="progress-bar">
+                    <div className="progress-bar-background"></div>
+                    <div
+                        className="progress-bar-fill"
+                        style={{
+                            left: `${leftPercentage}%`,
+                            width: `${widthPercentage}%`,
+                        }}
+                    ></div>
+                </div>
+                <p className="summary">
+                    Vous allez effectuer des recherches entre <span>{startDate}</span> et <span>{endDate}</span> pour les <span>{type}</span>.
+                </p>
+                <button onClick={executeQuery}>
+                    Chercher
+                </button>
+            </div>
+            <pre>{JSON.stringify(result, null, 2)}</pre>
+        </div>
+    );
 }
