@@ -127,3 +127,27 @@ SELECT * WHERE {
   FILTER (xsd:integer(str(?year)) >= 2000 && xsd:integer(str(?year)) <= 2020) # ici on change les années avec des variables de con voila bisous
 }
 ```
+
+
+
+counting all the different genres :
+```sparql
+PREFIX iut: <https://cours.iut-orsay.fr/npbd/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?wikidataGenreLabel (COUNT(?entity) AS ?genreCount)
+WHERE {
+  ?entity a iut:Nominee ;
+          iut:category "Album Of The Year"@en ; # Change selon le type album ou song
+          iut:year ?year ;
+          iut:hasGenre ?wikidataGenreLabel .
+
+  # Convert the xsd:gYear to a string and compare
+  FILTER (xsd:integer(str(?year)) >= 2000 && xsd:integer(str(?year)) <= 2020) # Change selon les années désirées
+}
+GROUP BY ?wikidataGenreLabel
+ORDER BY DESC(?genreCount)
+```
