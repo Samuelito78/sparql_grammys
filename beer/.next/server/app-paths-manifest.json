@@ -1,3 +1,4 @@
 {
+  "/api/graphdb/route": "app/api/graphdb/route.js",
   "/page": "app/page.js"
 }

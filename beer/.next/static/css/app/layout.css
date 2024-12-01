@@ -9,10 +9,6 @@
     --gold-color-2: #ffd630;
     --call-for-action: #5f57ab;
     --interract-color: #5784ab;
-    --septenary-color: #f8b400;
-    --octonary-color: #f8b400;
-    --nonary-color: #f8b400;
-    --denary-color: #f8b400;
 }
 
 *,
@@ -43,6 +39,9 @@ body {
         var(--background-color-1),
         var(--background-color-2)
     );
+
+    background-attachment: fixed; /* Fixe le gradient au viewport */
+    background-size: 100% 100%; /* Le gradient reste étiré à l'écran */
 }
 
 header {
