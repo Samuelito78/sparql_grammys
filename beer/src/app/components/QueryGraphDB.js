@@ -150,9 +150,9 @@ export default function QueryGraphDB() {
                 </button>
             </div>
 
-            <pre>
+            <div className="chart">
                 <PieChart jsonData={result} />
-            </pre>
+            </div>
         </div>
     );
 }

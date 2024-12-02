@@ -15,12 +15,22 @@ export default function PieChart({ jsonData }) {
                 labels,
                 datasets: [
                     {
-                        label: "Different Genres",
+                        label: "Winning Genres",
                         data,
                         backgroundColor: generateColors(labels.length),
                         hoverOffset: 4,
                     },
                 ],
+            },
+            options: {
+                layout: {
+                    padding: {
+                        top: chartRef.current.clientHeight * 0.50,
+                        bottom: chartRef.current.clientHeight * 0.35,
+                        left: chartRef.current.clientWidth * 0.50,
+                        right: chartRef.current.clientWidth * 0.50,
+                    },
+                },
             },
         });
         
