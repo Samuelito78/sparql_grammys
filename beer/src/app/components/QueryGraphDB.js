@@ -4,12 +4,14 @@ import { useState } from "react";
 import PieChart from "./PieChart";
 
 export default function QueryGraphDB() {
-    const [result, setResult] = useState(null);
-    const [startDate, setStartDate] = useState(1958);
-    const [endDate, setEndDate] = useState(2019);
-    const [type, setType] = useState("albums");
-    const MIN_DATE = 1958;
+    const MIN_DATE = 1964;
     const MAX_DATE = 2019;
+
+    const [result, setResult] = useState(null);
+    const [startDate, setStartDate] = useState(MIN_DATE);
+    const [endDate, setEndDate] = useState(MAX_DATE);
+    const [type, setType] = useState("albums");
+    const [isChartDiplayed, setIsChartDiplayed] = useState(false);
 
     const calculateProgressBar = (start, end) => {
         const leftPercentage = ((start - MIN_DATE) / (MAX_DATE - MIN_DATE)) * 100;
@@ -54,6 +56,7 @@ export default function QueryGraphDB() {
 
             const data = await response.json();
             setResult(data);
+            setIsChartDiplayed(true);
         } catch (error) {
             console.error("Error executing query:", error);
         }
@@ -150,7 +153,7 @@ export default function QueryGraphDB() {
                 </button>
             </div>
 
-            <div className="chart">
+            <div className="chart" style={{ display: isChartDiplayed ? "flex" : "none" }}>
                 <PieChart jsonData={result} />
             </div>
         </div>

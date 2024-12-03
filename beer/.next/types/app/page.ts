@@ -1,4 +1,4 @@
-// File: C:\Users\samue\sparql_grammys\beer\src\app\page.js
+// File: /Users/augustin/Documents/Cours/BUT_info/S5/BD/projet/beer/src/app/page.js
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

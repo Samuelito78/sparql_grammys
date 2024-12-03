@@ -1,4 +1,4 @@
-// File: C:\Users\samue\sparql_grammys\beer\src\app\api\graphdb\route.js
+// File: /Users/augustin/Documents/Cours/BUT_info/S5/BD/projet/beer/src/app/api/graphdb/route.js
 import * as entry from '../../../../../src/app/api/graphdb/route.js'
 import type { NextRequest } from 'next/server.js'
 

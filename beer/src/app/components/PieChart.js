@@ -1,16 +1,22 @@
 import Chart from 'chart.js/auto';
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function PieChart({ jsonData }) {
     const chartRef = useRef(null);
+    const [chartType, setChartType] = useState("bar");
 
     useEffect(() => {
         if (!jsonData) return;
 
         const { labels, data } = processChartData(jsonData);
 
-        const chart = new Chart(chartRef.current, {
-            type: "bar",
+        const existingChart = Chart.getChart(chartRef.current);
+        if (existingChart) {
+            existingChart.destroy();
+        }
+
+        new Chart(chartRef.current, {
+            type: chartType,
             data: {
                 labels,
                 datasets: [
@@ -22,28 +28,33 @@ export default function PieChart({ jsonData }) {
                     },
                 ],
             },
-            options: {
-                layout: {
-                    padding: {
-                        top: chartRef.current.clientHeight * 0.50,
-                        bottom: chartRef.current.clientHeight * 0.35,
-                        left: chartRef.current.clientWidth * 0.50,
-                        right: chartRef.current.clientWidth * 0.50,
-                    },
-                },
-            },
+            // options: {
+            //     layout: {
+            //         padding: {
+            //             top: chartRef.current.clientHeight * 0.50,
+            //             bottom: chartRef.current.clientHeight * 0.35,
+            //             left: chartRef.current.clientWidth * 0.50,
+            //             right: chartRef.current.clientWidth * 0.50,
+            //         },
+            //     },
+            // },
         });
-        
+    }, [jsonData, chartType]); // update if `jsonData` or `chartType` change
 
-        return () => {
-            chart.destroy();
-        };
-    }, [jsonData]);
+    const toggleChartType = () => {
+        setChartType((prevType) => (prevType === "bar" ? "pie" : "bar"));
+    };
 
     return (
-        <div>
+        <>
+            <button
+                className="chart-type"
+                onClick={toggleChartType}
+            >
+                {chartType === "bar" ? "Pie" : "Bar"}
+            </button>
             <canvas ref={chartRef}></canvas>
-        </div>
+        </>
     );
 }
 
@@ -59,5 +70,5 @@ const processChartData = (jsonData) => {
     return { labels, data };
 };
 
-const generateColors = (count) => 
+const generateColors = (count) =>
     Array.from({ length: count }, () => `hsl(${Math.random() * 360}, 70%, 60%)`);

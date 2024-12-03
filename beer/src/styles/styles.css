@@ -172,7 +172,7 @@ h2 {
     display: none;
 }
 
-.form-group button {
+button {
     padding: 10px 20px;
     font-size: 1.5rem;
     font-weight: 900;
@@ -184,7 +184,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.form-group button:hover {
+button:hover {
     background-color: var(--call-for-action);
     color: var(--background-color-1);
 }
@@ -198,6 +198,7 @@ h2 {
 .summary span {
     color: var(--interract-color);
 }
+
 /*progress bar */
 
 .progress-bar {
@@ -260,3 +261,41 @@ b {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* chart */
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80%;
+
+    margin: 60px auto;
+}
+
+.chart-type {
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: var(--interract-color);
+    color: var(--main-text-color);
+    border: 0px solid var(--gold-color-1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    margin-bottom: 20px;
+}
+
+.chart-type:hover {
+    background-color: var(--call-for-action);
+    color: var(--background-color-1);
+}
+
+/* .chart canvas {
+    max-width: 70%;
+    aspect-ratio: 1;
+    max-height: 300px;
+} */
