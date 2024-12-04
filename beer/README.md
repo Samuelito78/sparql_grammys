@@ -81,20 +81,6 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 
 ---
 
-## Step 5: Build and Start for Production
-
-To build the project for production:
-```bash
-npm run build
-```
-
-To start the production server:
-```bash
-npm start
-```
-
----
-
 ## Troubleshooting
 
 ### Common Issues
@@ -116,5 +102,3 @@ npm -v
 ## Additional Information
 
 For further details about Next.js, refer to the [Next.js documentation](https://nextjs.org/docs).
-
-Feel free to customize this README based on your specific project setup!
