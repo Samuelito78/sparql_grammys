@@ -1,6 +1,7 @@
 # sparql_grammys
 Sparql project on grammys and wikidata
 
+csv source : <a href="https://www.kaggle.com/datasets/unanimad/grammy-awards">Here</a>
 
 example of a query that retrieves the genre of a specified album on wikidata :
 ```sparql
