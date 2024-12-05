@@ -70,7 +70,12 @@ npm install
 
 ---
 
-## Step 4: Run the Development Server
+## Step 4: Run the Development Server & GraphDB
+
+Start GraphDB containing the local graph and in **code/src/utils/graphdb.js** replace the first line with your repository name :
+```JavaScript
+const GRAPHDB_URL = "http://localhost:7200/repositories/grammys-sparql";
+```
 
 Start the development server:
 ```bash
