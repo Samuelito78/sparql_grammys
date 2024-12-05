@@ -39,10 +39,10 @@ This README provides step-by-step instructions to install the necessary dependen
 ### Linux:
 1. Open a terminal and run the following commands:
    ```bash
-   curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+   curl -fsSL https://deb.nodesource.com/setup_16 | sudo -E bash -
    sudo apt-get install -y nodejs
    ```
-   Replace `16.x` with the desired version if necessary.
+
 2. Verify the installation:
    ```bash
    node -v
